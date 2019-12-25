@@ -1,6 +1,6 @@
 /*!
   * Bootstrap selector-engine.js v4.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -81,18 +81,17 @@
       return polyfill_js.closest.call(element, selector);
     },
     prev: function prev(element, selector) {
-      var siblings = [];
-      var previous = element.previousSibling;
+      var previous = element.previousElementSibling;
 
-      while (previous && previous.nodeType === Node.ELEMENT_NODE && previous.nodeType !== NODE_TEXT) {
+      while (previous) {
         if (this.matches(previous, selector)) {
-          siblings.push(previous);
+          return [previous];
         }
 
-        previous = previous.previousSibling;
+        previous = previous.previousElementSibling;
       }
 
-      return siblings;
+      return [];
     }
   };
 
