@@ -247,7 +247,7 @@ Validation styles are available for the following form controls and components:
   </div>
   <div class="form-check mb-3">
     <input type="radio" class="form-check-input" id="validationSupportedRadio2" name="radio-stacked" required>
-    <label class="form-check-label" for="validationSupportedRadio3">Or toggle this other radio</label>
+    <label class="form-check-label" for="validationSupportedRadio2">Or toggle this other radio</label>
   </div>
 
   <select class="form-select mb-3" required>
@@ -259,7 +259,7 @@ Validation styles are available for the following form controls and components:
 
   <div class="form-file">
     <input type="file" class="form-file-input" id="validationSupportedFile" required>
-    <label class="form-file-label" for="validationSupported6">
+    <label class="form-file-label" for="validationSupportedFile">
       <span class="form-file-text">Choose file...</span>
       <span class="form-file-button">Browse</span>
     </label>
@@ -274,14 +274,14 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
 {{< example >}}
 <form class="was-validated">
   <div class="mb-3">
-    <input type="text" class="form-control is-invalid" id="validationSupportedInput" placeholder="Required example textarea" value="Bootstrap" required>
+    <input type="text" class="form-control is-invalid" id="validationMessageInput" placeholder="Required example textarea" value="Bootstrap" required>
     <div class="valid-feedback">
       Example valid feedback text
     </div>
   </div>
 
   <div class="mb-3">
-    <textarea class="form-control is-invalid" id="validationSupportedTextarea" placeholder="Required example textarea" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
+    <textarea class="form-control is-invalid" id="validationMessageTextarea" placeholder="Required example textarea" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
     <div class="valid-feedback">
       Example valid feedback text
     </div>
@@ -290,9 +290,9 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
   <div class="mb-3">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="validationSupportedInputGroup">@</span>
+        <span class="input-group-text" id="validationMessageInputGroup">@</span>
       </div>
-      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationSupportedInputGroup" required>
+      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationMessageInputGroup" required>
     </div>
     <div class="invalid-feedback">
       Example invalid feedback text
@@ -301,8 +301,8 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
 
   <div class="mb-3">
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="validationSupportedCheckbox" required>
-      <label class="form-check-label" for="validationSupportedCheckbox">Check this checkbox</label>
+      <input type="checkbox" class="form-check-input" id="validationMessageCheckbox" required>
+      <label class="form-check-label" for="validationMessageCheckbox">Check this checkbox</label>
     </div>
     <div class="invalid-feedback">
       Example invalid feedback text
@@ -311,12 +311,12 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
 
   <div class="mb-3">
     <div class="form-check">
-      <input type="radio" class="form-check-input" id="validationSupportedRadio1" name="radio-stacked" required>
-      <label class="form-check-label" for="validationSupportedRadio1">Toggle this radio</label>
+      <input type="radio" class="form-check-input" id="validationMessageRadio1" name="radio-stacked" required>
+      <label class="form-check-label" for="validationMessageRadio1">Toggle this radio</label>
     </div>
     <div class="form-check">
-      <input type="radio" class="form-check-input" id="validationSupportedRadio2" name="radio-stacked" required>
-      <label class="form-check-label" for="validationSupportedRadio2">Or toggle this other radio</label>
+      <input type="radio" class="form-check-input" id="validationMessageRadio2" name="radio-stacked" required>
+      <label class="form-check-label" for="validationMessageRadio2">Or toggle this other radio</label>
     </div>
     <div class="invalid-feedback">
       Example invalid feedback text
@@ -336,8 +336,8 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
   </div>
 
   <div class="form-file">
-    <input type="file" class="form-file-input" id="validationSupportedFile" required>
-    <label class="form-file-label" for="validationSupportedFile">
+    <input type="file" class="form-file-input" id="validationMessageFile" required>
+    <label class="form-file-label" for="validationMessageFile">
       <span class="form-file-text">Choose file...</span>
       <span class="form-file-button">Browse</span>
     </label>
