@@ -27,9 +27,9 @@ With that in mind, consider the following demos for our custom form validation s
 
 ## Custom styles
 
-For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+For custom Bootstrap form validation, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.form-select`, and not `.form-control`.
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback.
 
 {{< example >}}
 <form class="needs-validation" novalidate>
@@ -37,16 +37,10 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Last name</label>
       <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustomUsername">Username</label>
@@ -55,9 +49,6 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
         <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
       </div>
     </div>
   </div>
@@ -65,9 +56,6 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">City</label>
       <input type="text" class="form-control" id="validationCustom03" required>
-      <div class="invalid-feedback">
-        Please provide a valid city.
-      </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom04">State</label>
@@ -75,16 +63,10 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
         <option selected disabled value="">Choose...</option>
         <option>...</option>
       </select>
-      <div class="invalid-feedback">
-        Please select a valid state.
-      </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05">Zip</label>
       <input type="text" class="form-control" id="validationCustom05" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
     </div>
   </div>
   <div class="mb-3">
@@ -93,9 +75,6 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
       <label class="form-check-label" for="invalidCheck">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
@@ -183,7 +162,7 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 
 ## Server side
 
-We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`.
 
 {{< example >}}
 <form>
@@ -191,16 +170,10 @@ We recommend using client-side validation, but in case you require server-side v
     <div class="col-md-4 mb-3">
       <label for="validationServer01">First name</label>
       <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationServer02">Last name</label>
       <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationServerUsername">Username</label>
@@ -209,9 +182,6 @@ We recommend using client-side validation, but in case you require server-side v
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
         <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
       </div>
     </div>
   </div>
@@ -219,9 +189,6 @@ We recommend using client-side validation, but in case you require server-side v
     <div class="col-md-6 mb-3">
       <label for="validationServer03">City</label>
       <input type="text" class="form-control is-invalid" id="validationServer03" required>
-      <div class="invalid-feedback">
-        Please provide a valid city.
-      </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer04">State</label>
@@ -229,16 +196,10 @@ We recommend using client-side validation, but in case you require server-side v
         <option selected disabled value="">Choose...</option>
         <option>...</option>
       </select>
-      <div class="invalid-feedback">
-        Please select a valid state.
-      </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationServer05">Zip</label>
       <input type="text" class="form-control is-invalid" id="validationServer05" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
-      </div>
     </div>
   </div>
   <div class="mb-3">
@@ -247,9 +208,6 @@ We recommend using client-side validation, but in case you require server-side v
       <label class="form-check-label" for="invalidCheck3">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Submit form</button>
@@ -261,34 +219,108 @@ We recommend using client-side validation, but in case you require server-side v
 Validation styles are available for the following form controls and components:
 
 - `<input>`s and `<textarea>`s with `.form-control` (including up to one `.form-control` in input groups)
-- `<select>`s with `.form-select`
 - `.form-check`s
+- `<select>`s with `.form-select`
 - `.form-file`
 
 {{< example >}}
 <form class="was-validated">
-  <div class="mb-3">
-    <label for="validationTextarea">Textarea</label>
-    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-    <div class="invalid-feedback">
-      Please enter a message in the textarea.
+  <input type="text" class="form-control is-invalid mb-3" id="validationSupportedInput" placeholder="Required example textarea" required>
+
+  <textarea class="form-control is-invalid mb-3" id="validationSupportedTextarea" placeholder="Required example textarea" required></textarea>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="validationSupportedInputGroup">@</span>
     </div>
+    <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationSupportedInputGroup" required>
   </div>
 
   <div class="form-check mb-3">
-    <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
-    <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
-    <div class="invalid-feedback">Example invalid feedback text</div>
+    <input type="checkbox" class="form-check-input" id="validationSupportedCheckbox" required>
+    <label class="form-check-label" for="validationSupportedCheckbox">Check this checkbox</label>
   </div>
 
   <div class="form-check">
-    <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
-    <label class="form-check-label" for="validationFormCheck2">Toggle this radio</label>
+    <input type="radio" class="form-check-input" id="validationSupportedRadio1" name="radio-stacked" required>
+    <label class="form-check-label" for="validationSupportedRadio1">Toggle this radio</label>
   </div>
   <div class="form-check mb-3">
-    <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
-    <label class="form-check-label" for="validationFormCheck3">Or toggle this other radio</label>
-    <div class="invalid-feedback">More example invalid feedback text</div>
+    <input type="radio" class="form-check-input" id="validationSupportedRadio2" name="radio-stacked" required>
+    <label class="form-check-label" for="validationSupportedRadio3">Or toggle this other radio</label>
+  </div>
+
+  <select class="form-select mb-3" required>
+    <option value="">Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+
+  <div class="form-file">
+    <input type="file" class="form-file-input" id="validationSupportedFile" required>
+    <label class="form-file-label" for="validationSupported6">
+      <span class="form-file-text">Choose file...</span>
+      <span class="form-file-button">Browse</span>
+    </label>
+  </div>
+</form>
+{{< /example >}}
+
+## Feedback messages
+
+You can insert custom feedback messages with the `.valid-feedback` or `.invalid-feedback` that replaces the browser's default feedback messages.
+
+{{< example >}}
+<form class="was-validated">
+  <div class="mb-3">
+    <input type="text" class="form-control is-invalid" id="validationSupportedInput" placeholder="Required example textarea" value="Bootstrap" required>
+    <div class="valid-feedback">
+      Example valid feedback text
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <textarea class="form-control is-invalid" id="validationSupportedTextarea" placeholder="Required example textarea" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
+    <div class="valid-feedback">
+      Example valid feedback text
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="validationSupportedInputGroup">@</span>
+      </div>
+      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationSupportedInputGroup" required>
+    </div>
+    <div class="invalid-feedback">
+      Example invalid feedback text
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="validationSupportedCheckbox" required>
+      <label class="form-check-label" for="validationSupportedCheckbox">Check this checkbox</label>
+    </div>
+    <div class="invalid-feedback">
+      Example invalid feedback text
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="validationSupportedRadio1" name="radio-stacked" required>
+      <label class="form-check-label" for="validationSupportedRadio1">Toggle this radio</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="validationSupportedRadio2" name="radio-stacked" required>
+      <label class="form-check-label" for="validationSupportedRadio3">Or toggle this other radio</label>
+    </div>
+    <div class="invalid-feedback">
+      Example invalid feedback text
+    </div>
   </div>
 
   <div class="mb-3">
@@ -298,81 +330,104 @@ Validation styles are available for the following form controls and components:
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select>
-    <div class="invalid-feedback">Example invalid select feedback</div>
+    <div class="invalid-feedback">
+      Example invalid feedback text
+    </div>
   </div>
 
   <div class="form-file">
-    <input type="file" class="form-file-input" id="validationFormFile" required>
-    <label class="form-file-label" for="validationFormFile">
+    <input type="file" class="form-file-input" id="validationSupportedFile" required>
+    <label class="form-file-label" for="validationSupported6">
       <span class="form-file-text">Choose file...</span>
       <span class="form-file-button">Browse</span>
     </label>
-    <div class="invalid-feedback">Example invalid form file feedback</div>
+  </div>
+  <div class="invalid-feedback">
+    Example invalid feedback text
   </div>
 </form>
 {{< /example >}}
 
 ## Tooltips
 
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
+If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning.
 
 {{< example >}}
-<form class="needs-validation" novalidate>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">First name</label>
-      <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Last name</label>
-      <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">Username</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-        <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-        </div>
-      </div>
+<form class="was-validated">
+  <div class="position-relative mb-5">
+    <input type="text" class="form-control is-invalid" id="validationSupportedInput" placeholder="Required example textarea" value="Bootstrap" required>
+    <div class="valid-tooltip">
+      Example valid feedback text
     </div>
   </div>
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationTooltip03">City</label>
-      <input type="text" class="form-control" id="validationTooltip03" required>
-      <div class="invalid-tooltip">
-        Please provide a valid city.
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">State</label>
-      <select class="form-select" id="validationTooltip04" required>
-        <option selected disabled value="">Choose...</option>
-        <option>...</option>
-      </select>
-      <div class="invalid-tooltip">
-        Please select a valid state.
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Zip</label>
-      <input type="text" class="form-control" id="validationTooltip05" required>
-      <div class="invalid-tooltip">
-        Please provide a valid zip.
-      </div>
+
+  <div class="position-relative mb-5">
+    <textarea class="form-control is-invalid" id="validationSupportedTextarea" placeholder="Required example textarea" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
+    <div class="valid-tooltip">
+      Example valid feedback text
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
+
+  <div class="position-relative mb-5">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="validationSupportedInputGroup">@</span>
+      </div>
+      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationSupportedInputGroup" required>
+    </div>
+    <div class="invalid-tooltip">
+      Example invalid feedback text
+    </div>
+  </div>
+
+  <div class="position-relative mb-5">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="validationSupportedCheckbox" required>
+      <label class="form-check-label" for="validationSupportedCheckbox">Check this checkbox</label>
+    </div>
+    <div class="invalid-tooltip">
+      Example invalid feedback text
+    </div>
+  </div>
+
+  <div class="position-relative mb-5">
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="validationSupportedRadio1" name="radio-stacked" required>
+      <label class="form-check-label" for="validationSupportedRadio1">Toggle this radio</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="validationSupportedRadio2" name="radio-stacked" required>
+      <label class="form-check-label" for="validationSupportedRadio3">Or toggle this other radio</label>
+    </div>
+    <div class="invalid-tooltip">
+      Example invalid feedback text
+    </div>
+  </div>
+
+  <div class="position-relative mb-5">
+    <select class="form-select" required>
+      <option value="">Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <div class="invalid-tooltip">
+      Example invalid feedback text
+    </div>
+  </div>
+
+  <div class="position-relative">
+    <div class="form-file">
+      <input type="file" class="form-file-input" id="validationSupportedFile" required>
+      <label class="form-file-label" for="validationSupported6">
+        <span class="form-file-text">Choose file...</span>
+        <span class="form-file-button">Browse</span>
+      </label>
+    </div>
+    <div class="invalid-tooltip">
+      Example invalid feedback text
+    </div>
+  </div>
 </form>
 {{< /example >}}
 
