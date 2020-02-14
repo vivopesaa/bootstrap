@@ -274,15 +274,15 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
 {{< example >}}
 <form class="was-validated">
   <div class="mb-3">
-    <input type="text" class="form-control is-invalid" id="validationMessageInput" placeholder="Required example textarea" value="Bootstrap" required>
-    <div class="valid-feedback">
+    <input type="text" class="form-control is-invalid" id="validationMessageInput" placeholder="Required example textarea" value="Bootstrap" aria-descriebedby="validationMessageInputFeedback" required>
+    <div class="valid-feedback" id="validationMessageInputFeedback">
       Example valid feedback text
     </div>
   </div>
 
   <div class="mb-3">
-    <textarea class="form-control is-invalid" id="validationMessageTextarea" placeholder="Required example textarea" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
-    <div class="valid-feedback">
+    <textarea class="form-control is-invalid" id="validationMessageTextarea" placeholder="Required example textarea" aria-descriebedby="validationMessageTextareaFeedback" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
+    <div class="valid-feedback" id="validationMessageTextareaFeedback">
       Example valid feedback text
     </div>
   </div>
@@ -292,25 +292,25 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
       <div class="input-group-prepend">
         <span class="input-group-text" id="validationMessageInputGroup">@</span>
       </div>
-      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationMessageInputGroup" required>
+      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationMessageInputGroup validationMessageInputGroupFeedback" required>
     </div>
-    <div class="invalid-feedback">
+    <div class="invalid-feedback" id="validationMessageInputGroupFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="mb-3">
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="validationMessageCheckbox" required>
+      <input type="checkbox" class="form-check-input" id="validationMessageCheckbox" aria-descriebedby="validationMessageCheckboxFeedback" required>
       <label class="form-check-label" for="validationMessageCheckbox">Check this checkbox</label>
     </div>
-    <div class="invalid-feedback">
+    <div class="invalid-feedback" id="validationMessageCheckboxFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="mb-3">
-    <div class="form-check">
+    <div class="form-check" aria-descriebedby="validationMessageRadioFeedback" >
       <input type="radio" class="form-check-input" id="validationMessageRadio1" name="radio-stacked" required>
       <label class="form-check-label" for="validationMessageRadio1">Toggle this radio</label>
     </div>
@@ -318,31 +318,31 @@ You can insert custom feedback messages with the `.valid-feedback` or `.invalid-
       <input type="radio" class="form-check-input" id="validationMessageRadio2" name="radio-stacked" required>
       <label class="form-check-label" for="validationMessageRadio2">Or toggle this other radio</label>
     </div>
-    <div class="invalid-feedback">
+    <div class="invalid-feedback" id="validationMessageRadioFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="mb-3">
-    <select class="form-select" required>
+    <select class="form-select" aria-descriebedby="validationMessageSelectFeedback" required>
       <option value="">Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select>
-    <div class="invalid-feedback">
+    <div class="invalid-feedback" id="validationMessageSelectFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="form-file">
-    <input type="file" class="form-file-input" id="validationMessageFile" required>
+    <input type="file" class="form-file-input" id="validationMessageFile" aria-descriebedby="validationMessageFileFeedback" required>
     <label class="form-file-label" for="validationMessageFile">
       <span class="form-file-text">Choose file...</span>
       <span class="form-file-button">Browse</span>
     </label>
   </div>
-  <div class="invalid-feedback">
+  <div class="invalid-feedback" id="validationMessageFileFeedback">
     Example invalid feedback text
   </div>
 </form>
@@ -355,15 +355,15 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 {{< example >}}
 <form class="was-validated">
   <div class="position-relative mb-5">
-    <input type="text" class="form-control is-invalid" id="validationTooltipInput" placeholder="Required example textarea" value="Bootstrap" required>
-    <div class="valid-tooltip">
+    <input type="text" class="form-control is-invalid" id="validationTooltipInput" placeholder="Required example textarea" value="Bootstrap" aria-descriebedby="validationTooltipInputFeedback" required>
+    <div class="valid-tooltip" id="validationTooltipInputFeedback">
       Example valid feedback text
     </div>
   </div>
 
   <div class="position-relative mb-5">
-    <textarea class="form-control is-invalid" id="validationTooltipTextarea" placeholder="Required example textarea" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
-    <div class="valid-tooltip">
+    <textarea class="form-control is-invalid" id="validationTooltipTextarea" placeholder="Required example textarea" aria-descriebedby="validationTooltipTextareaFeedback" required>Build responsive, mobile-first projects for the web with the world’s most popular open source front-end component library.</textarea>
+    <div class="valid-tooltip" id="validationTooltipTextareaFeedback">
       Example valid feedback text
     </div>
   </div>
@@ -373,24 +373,24 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
       <div class="input-group-prepend">
         <span class="input-group-text" id="validationTooltipInputGroup">@</span>
       </div>
-      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationTooltipInputGroup" required>
+      <input type="text" class="form-control is-invalid" placeholder="Username" aria-label="Username" aria-describedby="validationTooltipInputGroup validationTooltipInputGroupFeedback" required>
     </div>
-    <div class="invalid-tooltip">
+    <div class="invalid-tooltip" id="validationTooltipInputGroupFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="position-relative mb-5">
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="validationTooltipCheckbox" required>
+      <input type="checkbox" class="form-check-input" id="validationTooltipCheckbox" aria-descriebedby="validationTooltipInputGroupFeedback" required>
       <label class="form-check-label" for="validationTooltipCheckbox">Check this checkbox</label>
     </div>
-    <div class="invalid-tooltip">
+    <div class="invalid-tooltip" id="validationTooltipInputGroupFeedback">
       Example invalid feedback text
     </div>
   </div>
 
-  <div class="position-relative mb-5">
+  <div class="position-relative mb-5" aria-descriebedby="validationTooltipRadioFeedback">
     <div class="form-check">
       <input type="radio" class="form-check-input" id="validationTooltipRadio1" name="radio-stacked" required>
       <label class="form-check-label" for="validationTooltipRadio1">Toggle this radio</label>
@@ -399,32 +399,32 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
       <input type="radio" class="form-check-input" id="validationTooltipRadio2" name="radio-stacked" required>
       <label class="form-check-label" for="validationTooltipRadio2">Or toggle this other radio</label>
     </div>
-    <div class="invalid-tooltip">
+    <div class="invalid-tooltip" id="validationTooltipRadioFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="position-relative mb-5">
-    <select class="form-select" required>
+    <select class="form-select" aria-descriebedby="validationTooltipSelectFeedback" required>
       <option value="">Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select>
-    <div class="invalid-tooltip">
+    <div class="invalid-tooltip" id="validationTooltipSelectFeedback">
       Example invalid feedback text
     </div>
   </div>
 
   <div class="position-relative">
     <div class="form-file">
-      <input type="file" class="form-file-input" id="validationTooltipFile" required>
+      <input type="file" class="form-file-input" id="validationTooltipFile" aria-descriebedby="validationTooltipFileFeedback" required>
       <label class="form-file-label" for="validationTooltipFile">
         <span class="form-file-text">Choose file...</span>
         <span class="form-file-button">Browse</span>
       </label>
     </div>
-    <div class="invalid-tooltip">
+    <div class="invalid-tooltip" id="validationTooltipFileFeedback">
       Example invalid feedback text
     </div>
   </div>
