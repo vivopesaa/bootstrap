@@ -382,10 +382,10 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 
   <div class="position-relative mb-5">
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="validationTooltipCheckbox" aria-describedby="validationTooltipInputGroupFeedback" required>
+      <input type="checkbox" class="form-check-input" id="validationTooltipCheckbox" aria-describedby="validationTooltipCheckboxFeedback" required>
       <label class="form-check-label" for="validationTooltipCheckbox">Check this checkbox</label>
     </div>
-    <div class="invalid-tooltip" id="validationTooltipInputGroupFeedback">
+    <div class="invalid-tooltip" id="validationTooltipCheckboxFeedback">
       Example invalid feedback text
     </div>
   </div>
