@@ -416,8 +416,7 @@ class Modal {
         return
       }
 
-      const isModalOverflowing =
-        this._element.scrollHeight > document.documentElement.clientHeight
+      const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight
 
       if (!isModalOverflowing) {
         this._element.style.overflowY = 'hidden'
