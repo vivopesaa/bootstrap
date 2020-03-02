@@ -416,10 +416,24 @@ class Modal {
         return
       }
 
+      const isModalOverflowing =
+        this._element.scrollHeight > document.documentElement.clientHeight
+
+      if (!isModalOverflowing) {
+        this._element.style.overflowY = 'hidden'
+      }
+
       this._element.classList.add(ClassName.STATIC)
-      const modalTransitionDuration = getTransitionDurationFromElement(this._element)
+      const modalTransitionDuration = getTransitionDurationFromElement(this._dialog)
+      EventHandler.off(this._element, TRANSITION_END)
       EventHandler.one(this._element, TRANSITION_END, () => {
         this._element.classList.remove(ClassName.STATIC)
+        if (!isModalOverflowing) {
+          EventHandler.one(this._element, TRANSITION_END, () => {
+            this._element.style.overflowY = ''
+          })
+          emulateTransitionEnd(this._element, modalTransitionDuration)
+        }
       })
       emulateTransitionEnd(this._element, modalTransitionDuration)
       this._element.focus()
