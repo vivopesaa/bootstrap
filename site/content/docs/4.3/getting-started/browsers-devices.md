@@ -64,7 +64,6 @@ Similarly, the latest versions of most desktop browsers are supported.
       <th></th>
       <th>Chrome</th>
       <th>Firefox</th>
-      <th>Internet Explorer</th>
       <th>Microsoft Edge</th>
       <th>Opera</th>
       <th>Safari</th>
@@ -75,7 +74,6 @@ Similarly, the latest versions of most desktop browsers are supported.
       <th scope="row">Mac</th>
       <td>Supported</td>
       <td>Supported</td>
-      <td class="text-muted">&mdash;</td>
       <td>Supported</td>
       <td>Supported</td>
       <td>Supported</td>
@@ -84,7 +82,6 @@ Similarly, the latest versions of most desktop browsers are supported.
       <th scope="row">Windows</th>
       <td>Supported</td>
       <td>Supported</td>
-      <td>IE11 only</td>
       <td>Supported</td>
       <td>Supported</td>
       <td class="text-muted">&mdash;</td>
@@ -98,7 +95,7 @@ Unofficially, Bootstrap should look and behave well enough in Chromium and Chrom
 
 ## Internet Explorer
 
-Internet Explorer 11 is supported; IE10 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in Internet Explorer, or require prefixed properties for full functionality. Visit [Can I use...](https://caniuse.com/) for details on browser support of CSS3 and HTML5 features. **If you require IE10 support, use Bootstrap 4.**
+Internet Explorer is not supported. **If you require Internet Explorer support, please use Bootstrap v4.**
 
 ## Modals and dropdowns on mobile
 
